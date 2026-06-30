@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.app-header {
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #2563eb;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 4px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2563eb;
+}
+
+.menu-btn {
+  display: none;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 32px;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.hero h1,
+.page-title h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.subtitle,
+.page-title p {
+  font-size: 18px;
+  color: #6b7280;
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.btn.primary {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.profile-card,
+.card,
+.activity-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.profile-card {
+  text-align: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #14b8a6);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.profile-card h2 {
+  margin-bottom: 6px;
+}
+
+.profile-card p,
+.card p,
+.activity-card p {
+  color: #6b7280;
+}
+
+.section {
+  margin-top: 56px;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.card p + p {
+  margin-top: 12px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-chip {
+  background: #ffffff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.page-title {
+  margin-bottom: 36px;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.activity-card {
+  transition: 0.2s;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+}
+
+.activity-card h2 {
+  font-size: 22px;
+  margin: 12px 0;
+}
+
+.tag {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.date {
+  margin-top: 16px;
+  font-weight: 700;
+  color: #2563eb !important;
+}
+
+.footer {
+  text-align: center;
+  padding: 28px 20px;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    padding: 16px 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero h1,
+  .page-title h1 {
+    font-size: 38px;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+}
