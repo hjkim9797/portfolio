@@ -166,6 +166,12 @@ body {
   color: #6b7280;
 }
 
+.student-id {
+  margin-top: 8px;
+  color: #2563eb !important;
+  font-weight: 700;
+}
+
 .section {
   margin-top: 56px;
 }
